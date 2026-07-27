@@ -1,0 +1,346 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:linear-gradient(
+        180deg,
+        #dceeff 0%,
+        #eef7ff 40%,
+        #ffffff 100%
+    );
+
+    color:#1e293b;
+
+    min-height:100vh;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+
+    padding:25px 10%;
+
+    position:sticky;
+    top:0;
+    z-index:100;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.4);
+
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+}
+
+.logo-area{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+}
+
+.logo{
+
+    width:90px;
+    height:90px;
+
+    object-fit:contain;
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+.logo-area h1{
+
+    font-size:2rem;
+
+}
+
+.logo-area p{
+
+    margin-top:5px;
+
+    color:#64748b;
+
+}
+
+.logo-area span{
+
+    color:#3b82f6;
+    font-weight:bold;
+
+}
+
+/* ===========================
+   DOWNLOAD BUTTON
+=========================== */
+
+.download{
+
+    display:inline-block;
+
+    background:linear-gradient(
+        135deg,
+        #4da3ff,
+        #2563eb
+    );
+
+    color:white;
+
+    padding:15px 60px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+
+}
+
+.download:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.35);
+
+}
+
+/* ===========================
+   SOCIALS
+=========================== */
+
+.socials{
+
+    margin-top:15px;
+
+    display:flex;
+    justify-content:center;
+    gap:14px;
+
+}
+
+.socials img{
+
+    width:32px;
+
+    transition:.2s;
+
+}
+
+.socials img:hover{
+
+    transform:translateY(-3px) scale(1.15);
+
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+main{
+
+    padding:70px 10%;
+
+}
+
+h2{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+    font-size:2.2rem;
+
+    color:#2563eb;
+
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:12px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+
+    border:1px solid rgba(59,130,246,.08);
+
+}
+
+.card:hover{
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        0 20px 45px rgba(59,130,246,.18);
+
+}
+
+.card img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.03);
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    margin-top:90px;
+
+    padding:30px;
+
+    text-align:center;
+
+    background:white;
+
+    color:#64748b;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.05);
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3b82f6;
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#dbeafe;
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:850px){
+
+    header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .logo-area{
+
+        flex-direction:column;
+
+    }
+
+    .download{
+
+        width:100%;
+
+    }
+
+}
